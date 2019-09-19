@@ -7,6 +7,9 @@ sap.ui.define([
 		onInit: function () {
 		
 		},
+		/*
+		переход на предыдущую страницу
+		*/
 		ToMainPage: function () {
 		history.go(-1);
 		}
