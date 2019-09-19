@@ -91,7 +91,7 @@
 					"controlId": "app"
 				},
 				{
-					"pattern": "CarDetail",
+					"pattern": "CarDetail/{Value}",
 					"name": "carDetail",
 					"view": "CarDetail",
 					"targetAggregation": "pages",
