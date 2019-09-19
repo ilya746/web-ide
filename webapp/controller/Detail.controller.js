@@ -12,6 +12,13 @@ sap.ui.define([
 		*/
 		ToMainPage: function () {
 		history.go(-1);
+		},
+		
+			onSelectionChange: function(oEvent) {
+			var sProductId = oEvent.getSource().getBindingContext().getProperty("carID");
+			this.getOwnerComponent().getRouter()
+				.navTo("carDetail",
+					{orderId:this._orderId, productId: sProductId});
 		}
 	});
 

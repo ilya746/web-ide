@@ -89,8 +89,21 @@
 					"view": "Detail",
 					"targetAggregation": "pages",
 					"controlId": "app"
+				},
+				{
+					"pattern": "CarDetail",
+					"name": "carDetail",
+					"view": "CarDetail",
+					"targetAggregation": "pages",
+					"controlId": "app"
 				}
-			]
+			],
+			"targets": {
+				"CarDetail": {
+					"viewType": "XML",
+					"viewName": "CarDetail"
+				}
+			}
 		}
 	}
 }

@@ -42,6 +42,6 @@ sap.ui.define([
         var list = this.getView().byId("tab1");
         var binding = list.getBinding("items");
         binding.filter(aFilters, "Application");
-	}
+	} 
 	});
 });

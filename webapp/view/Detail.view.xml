@@ -9,23 +9,16 @@
    <Shell id="shell">
       <App id="app">
          <pages>
-            <Page id="page1" title="{carName}" >
+            <Page id="page1" title="Cars Collection">
                <content>
                   <Button xmlns="sap.m" text="To Home page" id="button1" press="ToMainPage"/>
-                  
-                  	<List id="cars" 
-						items="{carAbout}"
-						headerText="Car about">
-					<items>
-						<StandardListItem title="{productName}">
-							<VBox class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom">
-                                 <Text text="{Brand}" />
-                                 <Text text="{Model}" />
-                            </VBox>
-                        </StandardListItem>     
-					</items>
-				</List>
-                  
+                  <List id="cars" 
+                     items="{/CarCollection}"
+                     headerText="Cars">
+                     <items>
+                        <StandardListItem title="{carName}"	type="Active" press="onSelectionChange"/>
+                     </items>
+                  </List>
                </content>
             </Page>
          </pages>
