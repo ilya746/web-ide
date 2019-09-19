@@ -1,0 +1,86 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:card="sap.f.cards" xmlns:f="sap.f" xmlns:layout="sap.ui.layout" xmlns:mc="sap.suite.ui.microchart" controllerName="Project.Project.controller.Home" displayBlock="true">
+   <Shell id="shell">
+      <App id="app">
+         <pages>
+            <Page id="page" title="Home page">
+               <content>
+                  <Button text="To detail page" id="button1" press="ToDetailPage" />
+                  <Carousel id="carousel0" width="auto" height="auto">
+                     <pages>
+                        <VBox id="vbox1">
+                           <Text text="" />
+                           <SearchField placeholder="Искать по бренду" liveChange="onSearch" id="field0" width="30%" />
+                           <Table items="{/CarCollection}" id="tab1" visible="true" inset="true" headerText="Car collection" itemPress="onClick">
+                              <columns>
+                                 <Column>
+                                    <Text text="Brand" />
+                                 </Column>
+                                 <Column>
+                                    <Text text="Model" />
+                                 </Column>
+                                 <Column>
+                                    <Text text="Description" />
+                                 </Column>
+                                 <Column>
+                                    <Text text="Image" />
+                                 </Column>
+                              </columns>
+                              <items>
+                                 <ColumnListItem type="Active">
+                                    <cells>
+                                       <Text text="{Brand}" />
+                                       <Text text="{Model}" />
+                                       <Text text="{Description}" />
+                                       <Image src="{Picture}" alt="Car image" />
+                                    </cells>
+                                 </ColumnListItem>
+                              </items>
+                           </Table>
+                        </VBox>
+                        <HBox width="100%" id="hbox0">
+                           <f:Card width="100%" height="50%" class="sapUiSmallMargin">
+                              <f:header>
+                                 <card:Header title="First Card" />
+                              </f:header>
+                              <f:content>
+                                 <layout:Grid content="{/Diagramm}">
+                                    <layout:VerticalLayout class="sapUiTinyMargin">
+                                       <mc:LineMicroChart size="{/size}" leftTopLabel="{leftTopLabel}" leftBottomLabel="{leftBottomLabel}" rightTopLabel="{rightTopLabel}" rightBottomLabel="{rightBottomLabel}" color="green" lines="{path: 'lines',templateShareable: true}" class="sapUiTinyMarginTop">
+                                          <mc:lines>
+                                             <mc:LineMicroChartLine points="{path: 'points', templateShareable: true }">
+                                                <mc:LineMicroChartEmphasizedPoint x="{x}" y="{y}" color="{color}" show="{show}" />
+                                             </mc:LineMicroChartLine>
+                                          </mc:lines>
+                                       </mc:LineMicroChart>
+                                    </layout:VerticalLayout>
+                                 </layout:Grid>
+                              </f:content>
+                           </f:Card>
+                           <f:Card class="sapUiResponsiveMargin ">
+                              <f:header>
+                                 <card:Header title="Second Card" />
+                              </f:header>
+                              <f:content>
+                                 <List items="{/CarCollection}">
+                                    <CustomListItem>
+                                       <HBox alignItems="Center" justifyContent="SpaceBetween">
+                                          <VBox class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom">
+                                             <Text text="{Brand}" />
+                                             <Text text="{Model}" />
+                                          </VBox>
+                                          <Text text="{Description}" />
+                                          <Image src="{Picture}" alt="car image" width="80%" />
+                                       </HBox>
+                                    </CustomListItem>
+                                 </List>
+                              </f:content>
+                           </f:Card>
+                        </HBox>
+                     </pages>
+                  </Carousel>
+               </content>
+            </Page>
+         </pages>
+      </App>
+   </Shell>
+</mvc:View>
