@@ -6,7 +6,7 @@
             showNavButton="true"
             navButtonPress="onNavBack">
             <content>
-               <f:SimpleForm title="About {carName}">
+               <f:SimpleForm title="About: {Value>/carName}">
                   <f:content>
                      <Label text="Brand"/>
                      <Text text="{Value>/Brand}" />
@@ -14,6 +14,14 @@
                      <Text text="{Value>/Model}" />
                      <Label text="Power"/>
                      <Text text="{Value>/Power}" />
+                     <Label text="Color"/>
+                     <Text text="{Value>/Color}" />
+                     <Label text="Description"/>
+                     <Text text="{Value>/Description}" />
+                     <Label text="Price"/>
+                     <Text text="{Value>/Price}" />
+                     <Label text="Picture"/>
+                    
                   </f:content>
                </f:SimpleForm>
             </content>
