@@ -16,7 +16,7 @@
                      items="{/CarCollection}"
                      headerText="Cars">
                      <items>
-                        <StandardListItem title="{carName}"	type="Active" press="onSelectionChange"/>
+                        <StandardListItem title="{carName}"	type="Navigation" press="onSelectionChange"/>
                      </items>
                   </List>
                </content>

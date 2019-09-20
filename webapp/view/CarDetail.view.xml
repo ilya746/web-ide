@@ -1,28 +1,24 @@
-<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:f="sap.ui.layout.form" controllerName="Project.Project.controller.CarDetail"
-   xmlns:html="http://www.w3.org/1999/xhtml">
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:f="sap.ui.layout.form" xmlns:html="http://www.w3.org/1999/xhtml" controllerName="Project.Project.controller.CarDetail">
    <App>
       <pages>
-         <Page title="{Value>/carName}" 
-            showNavButton="true"
-            navButtonPress="onNavBack">
+         <Page title="{Value>/carName}" showNavButton="true" navButtonPress="onNavBack">
             <content>
                <f:SimpleForm title="About: {Value>/carName}">
                   <f:content>
                      <Label text="Brand"/>
-                     <Text text="{Value>/Brand}" />
+                     <Text text="{Value>/Brand}"/>
                      <Label text="Model"/>
-                     <Text text="{Value>/Model}" />
+                     <Text text="{Value>/Model}"/>
                      <Label text="Power"/>
-                     <Text text="{Value>/Power}" />
+                     <Text text="{Value>/Power}"/>
                      <Label text="Color"/>
-                     <Text text="{Value>/Color}" />
+                     <Text text="{Value>/Color}"/>
                      <Label text="Description"/>
-                     <Text text="{Value>/Description}" />
+                     <Text text="{Value>/Description}"/>
                      <Label text="Price"/>
-                     <Text text="{Value>/Price}" />
-                     <Label text="Picture"/>
-                    
-                  </f:content>
+                     <Text text="{Value>/Price}"/>
+                     <Label text="Show Picture"/>
+                    </f:content>
                </f:SimpleForm>
             </content>
          </Page>
