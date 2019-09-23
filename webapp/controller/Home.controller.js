@@ -10,13 +10,16 @@ sap.ui.define([
 	return Controller.extend("Project.Project.controller.Home", {
 		onInit: function () {
 			// mock model
-			var sPath = sap.ui.require.toUrl("Project/Project") + "/cars.json";
+			var sPath = sap.ui.require.toUrl("Project/Project/model") + "/cars.json";
 			var oModel = new JSONModel(sPath);
 			this.getView().setModel(oModel);
 		},
 		//переход на вторую страницу
 		ToDetailPage: function () {
     		this.getOwnerComponent().getRouter().navTo("detail");
+		},
+		ToTablePage : function () {
+    		this.getOwnerComponent().getRouter().navTo("table");
 		},
 		
 	
