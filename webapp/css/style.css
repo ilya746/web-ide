@@ -1,1 +1,6 @@
 /* Enter your custom styles here */
+.sapUiFormLblColon .sapUiFormElementLbl>.sapMLabel:after {
+    content: "";
+}
+
+

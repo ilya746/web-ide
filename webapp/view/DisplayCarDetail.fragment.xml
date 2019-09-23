@@ -1,0 +1,60 @@
+<core:FragmentDefinition xmlns="sap.m"
+   xmlns:l="sap.ui.layout"
+   xmlns:f="sap.ui.layout.form"
+   xmlns:core="sap.ui.core">
+   <VBox class="sapUiSmallMargin">
+      <f:Form id="DisplayCarDetail"
+         editable="false">
+         <f:title>
+            <core:Title text="{Value>/CarName}" />
+         </f:title>
+         <f:layout>
+            <f:ResponsiveGridLayout
+               labelSpanXL="3"
+               labelSpanL="3"
+               labelSpanM="3"
+               labelSpanS="12"
+               adjustLabelSpan="false"
+               emptySpanXL="4"
+               emptySpanL="4"
+               emptySpanM="4"
+               emptySpanS="0"
+               columnsXL="1"
+               columnsL="1"
+               columnsM="1"
+               singleContainerFullSize="false" />
+         </f:layout>
+         <f:formContainers>
+            <f:FormContainer>
+               <f:formElements>
+                  <f:FormElement label="Brand">
+                     <f:fields>
+                        <Text text="{Value>/Brand}"  />
+                     </f:fields>
+                  </f:FormElement>
+                  <f:FormElement label="Model">
+                     <f:fields>
+                        <Text text="{Value>/Model}"  />
+                     </f:fields>
+                  </f:FormElement>
+                  <f:FormElement label="Power">
+                     <f:fields>
+                        <Text text="{Value>/Power}"  />
+                     </f:fields>
+                  </f:FormElement>
+                  <f:FormElement label="Color">
+                     <f:fields>
+                        <Text text="{Value>/Color}" />
+                     </f:fields>
+                  </f:FormElement>
+                  <f:FormElement label="Description">
+                     <f:fields>
+                        <Text text="{Value>/Description}" />
+                     </f:fields>
+                  </f:FormElement>
+               </f:formElements>
+            </f:FormContainer>
+         </f:formContainers>
+      </f:Form>
+   </VBox>
+</core:FragmentDefinition>

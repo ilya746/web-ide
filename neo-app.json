@@ -36,6 +36,13 @@
         "entryPath": "/test-resources"
       },
       "description": "SAPUI5 Test Resources"
+    },
+    {   "path": "/Northwind/Northwind.svc/",
+        "target": {
+        "type": "destination",
+        "name": "northwind"
+      },
+      "description": "northwind service"
     }
   ],
   "sendWelcomeFileRedirect": true
