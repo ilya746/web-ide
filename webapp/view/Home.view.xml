@@ -5,7 +5,7 @@
             <Page id="page" title="Home page">
                <content>
                   <Button text="To detail page" id="button1" press="ToDetailPage" />
-                  <Carousel id="carousel0" width="auto" height="auto">
+                  <Carousel id="carousel0" width="100%" height="100%">
                      <pages>
                         <VBox id="vbox1">
                            <Text text="" />
@@ -21,6 +21,15 @@
                                  <Column>
                                     <Text text="Description" />
                                  </Column>
+                                  <Column>
+                                    <Text text="Power" />
+                                 </Column>
+                                  <Column>
+                                    <Text text="Color" />
+                                 </Column>
+                                  <Column>
+                                    <Text text="Price" />
+                                 </Column>
                                  <Column>
                                     <Text text="Image" />
                                  </Column>
@@ -31,7 +40,10 @@
                                        <Text text="{Brand}" />
                                        <Text text="{Model}" />
                                        <Text text="{Description}" />
-                                       <Image src="{Picture}" alt="Car image" />
+                                       <Text text="{Power}" />
+                                       <Text text="{Color}" />
+                                       <Text text="{Price}"  />
+                                       <Image src="{Picture}" alt="Car image" width = "100%"/>
                                     </cells>
                                  </ColumnListItem>
                               </items>

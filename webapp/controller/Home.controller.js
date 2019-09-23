@@ -18,6 +18,9 @@ sap.ui.define([
 		ToDetailPage: function () {
     		this.getOwnerComponent().getRouter().navTo("detail");
 		},
+		
+	
+		// выводится messagebox с информацией выбранной строки
 		onClick: function (oEvent) {
 			/*var oSelectedItem = oEvent.getParameter("listItem");
           var oModel = oSelectedItem.getBindingContext().getObject();
@@ -30,8 +33,8 @@ sap.ui.define([
 				MessageBox.show("\nBrand: " + brandName + "\nModel: " + modelName + "\nDescription: " + descName, {
 					title: "Selected Car"
 				});
-			
 		},
+		// фильтр по бренду
 		onSearch : function (oEvt) {
         var aFilters = [];
         var sQuery = oEvt.getSource().getValue();

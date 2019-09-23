@@ -8,25 +8,25 @@ sap.ui.define([
 		
 		},
 		
-		onSelectionChange: function(oEvent) {
-			
- 		var oTable = oEvent.getSource().getSelectedItem().getBindingContext("detail");
-  var Row = oTable.oModel.getProperty(oTable.sPath);
-			
-			
-		/*	var titleName = oEvent.getSource().getBindingContext().getProperty("carName");
-			var BrandName = oEvent.getSource().getBindingContext().getProperty("Brand");
-			var ModelName = oEvent.getSource().getBindingContext().getProperty("Model");
-			var Power = oEvent.getSource().getBindingContext().getProperty("Power");
-			var data = { carName : titleName, Brand: BrandName, Model: ModelName, Power: Power};*/
-	var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-	oRouter.navTo("carDetail", { Value: JSON.stringify(Row)
-	});
+		// передача параметров в carDetail.view
+	onSelectionChange: function(oEvent) {
+			var NameValue = oEvent.getSource().getBindingContext().getProperty("carName");
+			var BranValue = oEvent.getSource().getBindingContext().getProperty("Brand");
+			var ModelValue = oEvent.getSource().getBindingContext().getProperty("Model");
+			var PowerValue = oEvent.getSource().getBindingContext().getProperty("Power");
+			var ColorValue = oEvent.getSource().getBindingContext().getProperty("Color");
+			var DescriptionValue = oEvent.getSource().getBindingContext().getProperty("Description");
+			var PriceValue = oEvent.getSource().getBindingContext().getProperty("Price");
+			var PictureValue = encodeURIComponent(oEvent.getSource().getBindingContext().getProperty("Picture")); // encodeURIComponent - кодируем символ слэша в url картинок
+			var data = { carName : NameValue, Brand : BranValue, Model : ModelValue, Power : PowerValue, Color : ColorValue, Description : DescriptionValue, Price : PriceValue, Picture:PictureValue};
+			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+			oRouter.navTo("carDetail", { Value: JSON.stringify(data)});
 		},
 		
-		/*
-		переход на предыдущую страницу
-		*/
+
+		
+	//	переход на предыдущую страницу
+	
 		ToMainPage: function () {
 		history.go(-1);
 		}
