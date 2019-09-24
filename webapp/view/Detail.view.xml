@@ -1,27 +1,19 @@
-<mvc:View controllerName="Project.Project.controller.Detail" 
-   xmlns:mvc="sap.ui.core.mvc" 
-   displayBlock="true" 
-   xmlns:f="sap.f" 
-   xmlns:card="sap.f.cards" 
-   xmlns:mc="sap.suite.ui.microchart" 
-   xmlns:layout="sap.ui.layout"
-   xmlns="sap.m">
-   <Shell id="shell">
-      <App id="app">
-         <pages>
-            <Page id="page1" title="Cars Collection">
-               <content>
-                  <Button xmlns="sap.m" text="To Home page" id="button1" press="ToMainPage"/>
-                  <List id="cars" 
-                     items="{/CarCollection}"
-                     headerText="Cars">
-                     <items>
-                        <StandardListItem title="{carName}"	type="Navigation" press="onSelectionChange" icon = "{Picture}"/>
-                     </items>
-                  </List>
-               </content>
-            </Page>
-         </pages>
-      </App>
-   </Shell>
+<mvc:View controllerName="Project.Project.controller.Detail" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns:f="sap.f"
+	xmlns:card="sap.f.cards" xmlns:mc="sap.suite.ui.microchart" xmlns:layout="sap.ui.layout" xmlns="sap.m">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page1" title="Cars Collection">
+					<content>
+						<Button xmlns="sap.m" text="To Home page" id="button1" press="ToMainPage"/>
+						<List id="cars" items="{/CarCollection}" headerText="Cars">
+							<items>
+								<StandardListItem title="{carName}" type="Navigation" press="onSelectionChange" icon="{Picture}"/>
+							</items>
+						</List>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
 </mvc:View>
