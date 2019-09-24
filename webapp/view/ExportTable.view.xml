@@ -1,0 +1,39 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="Project.Project.controller.ExportTable"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<pages>
+			<Page title="Export Page" showNavButton="true" navButtonPress="onNavBack">
+				<content>
+					<Table items="{/CarCollection}" id="tab2" visible="true" headerText="Car collection" itemPress="onClick">
+						<headerToolbar>
+							<OverflowToolbar>
+								<ToolbarSpacer/>
+								<Button icon="sap-icon://excel-attachment" press="handleExcelExport" tooltip = "export to xls"/>
+							</OverflowToolbar>
+						</headerToolbar>
+						<columns>
+							<Column>
+								<Text text="CarName"/>
+							</Column>
+							<Column>
+								<Text text="Brand"/>
+							</Column>
+							<Column>
+								<Text text="Model"/>
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem type="Active">
+								<cells>
+									<Text text="{carName}"/>
+									<Text text="{Brand}"/>
+									<Text text="{Model}"/>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

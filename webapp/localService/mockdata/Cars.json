@@ -1,0 +1,42 @@
+{
+	"CarCollection": [{
+		"carName": "Ford Focus",
+		"Brand": "Ford",
+		"Model": "Focus",
+		"Power": " 105 л.с.",
+		"Color": "white",
+		"Description": "Usual Car",
+		"Price": "* rub",
+		"Picture": "https://www.fordeumedia-a.ford.com/nas/gforcenaslive/rus/00l/yym/images/rus00lyym1j51th(a)(a)cohshowroom_0_0.png"
+
+	}, {
+		"carName": "Ford Mustang",
+		"Brand": "Ford",
+		"Model": "Mustang",
+		"Power": " 150 л.с.",
+		"Color": "yellow",
+		"Description": "Muscle Car",
+		"Price": "* rub",
+		"Picture": "https://www.ford.ru/content/dam/guxeu/global-shared/vehicle-images/mustang/nld00syyjbtmdsx(a)(a)c4tshowroom_0_0.png"
+
+	}, {
+		"carName": "BMW i8",
+		"Brand": "BMW",
+		"Model": "i8",
+		"Power": " 200 л.с.",
+		"Color": "black",
+		"Description": "Super Car",
+		"Price": "* rub",
+		"Picture": "https://avatanplus.com/files/resources/mid/5834722187d841588cddd314.png"
+	}, {
+		"carName": "Ford Transit",
+		"Brand": "Ford",
+		"Model": "Transit",
+		"Power": " 180 л.с.",
+		"Color": "white",
+		"Description": "Track Car",
+		"Price": "* rub",
+		"Picture": "https://www.ford.ru/content/dam/guxeu/ru/ru_ru/vehicle-images/transit-custom/ford-new_transit_custom-ru-768x432-showroom-cv.png"
+	}]
+	
+}

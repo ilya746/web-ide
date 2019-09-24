@@ -6,13 +6,14 @@
 				<Page id="page" title="Home page">
 					<content>
 						<Button text="To detail page" id="button1" press="ToDetailPage"/>
-						<Button text="To oData page" id="button2" press="ToTablePage"/>
+						<Button text="To export page" id="button2" press="toExportPage"/>
 						<Carousel id="carousel0" width="100%" height="100%">
 							<pages>
 								<VBox id="vbox1">
 									<Text text=""/>
 									<SearchField placeholder="Искать по бренду" liveChange="onSearch" id="field0" width="30%"/>
-									<Table items="{/CarCollection}" id="tab1" visible="true" headerText="Car collection" itemPress="onClick">
+									<Table items="{/CarCollection}" id="tab1" visible="true" headerText="Car collection" itemPress="onClick" growing="true"
+										growingScrollToLoad="true">
 										<columns>
 											<Column>
 												<Text text="Brand"/>

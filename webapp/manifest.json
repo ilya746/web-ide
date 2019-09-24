@@ -12,6 +12,15 @@
 		"sourceTemplate": {
 			"id": "ui5template.basicSAPUI5ApplicationProject",
 			"version": "1.40.12"
+		},
+		"dataSources": {
+			"carRemote": {
+				"uri": "/destinations/northwind/V2/Northwind/Northwind.svc/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0"
+				}
+			}
 		}
 	},
 	"sap.ui": {
@@ -56,6 +65,9 @@
 				"settings": {
 					"bundleName": "Project.Project.i18n.i18n"
 				}
+			},
+			"car": {
+				"dataSource": "carRemote"
 			}
 		},
 		"resources": {
@@ -96,12 +108,23 @@
 					"view": "CarDetail",
 					"targetAggregation": "pages",
 					"controlId": "app"
+				},
+				{
+					"pattern": "ExportPage",
+					"name": "exportPage",
+					"view": "ExportTable",
+					"targetAggregation": "pages",
+					"controlId": "app"
 				}
 			],
 			"targets": {
 				"CarDetail": {
 					"viewType": "XML",
 					"viewName": "CarDetail"
+				},
+				"ExportTable": {
+					"viewType": "XML",
+					"viewName": "ExportTable"
 				}
 			}
 		}
