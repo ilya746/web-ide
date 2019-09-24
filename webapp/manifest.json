@@ -91,9 +91,9 @@
 					"controlId": "app"
 				},
 				{
-					"pattern": "CarDetailPage/{Value}",
-					"name": "carDetailPage",
-					"view": "CarDetailPage",
+					"pattern": "CarDetail/{Value}",
+					"name": "carDetail",
+					"view": "CarDetail",
 					"targetAggregation": "pages",
 					"controlId": "app"
 				}
@@ -101,11 +101,7 @@
 			"targets": {
 				"CarDetail": {
 					"viewType": "XML",
-					"viewName": "DisplayCarDetail"
-				},
-				"CarDetailPage": {
-					"viewType": "XML",
-					"viewName": "CarDetailPage"
+					"viewName": "CarDetail"
 				}
 			}
 		}
