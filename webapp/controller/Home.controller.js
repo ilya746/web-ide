@@ -3,8 +3,9 @@ sap.ui.define([
 	"sap/ui/model/json/JSONModel",
 	"jquery.sap.global",
 	"sap/m/MessageBox",
-	"sap/ui/model/Filter"
-], function (Controller, JSONModel, jQuery, MessageBox, Filter) {
+	"sap/ui/model/Filter",
+	"sap/ui/export/Spreadsheet"
+], function (Controller, JSONModel, jQuery, MessageBox, Filter, Spreadsheet) {
 	"use strict";
 
 	return Controller.extend("Project.Project.controller.Home", {
@@ -17,9 +18,6 @@ sap.ui.define([
 		//переход на вторую страницу
 		ToDetailPage: function () {
 			this.getOwnerComponent().getRouter().navTo("detail");
-		},
-		ToTablePage: function () {
-			this.getOwnerComponent().getRouter().navTo("table");
 		},
 
 		// выводится messagebox с информацией выбранной строки
@@ -47,6 +45,10 @@ sap.ui.define([
 			var list = this.getView().byId("tab1");
 			var binding = list.getBinding("items");
 			binding.filter(aFilters, "Application");
+		},
+
+		toExportPage: function () {
+			this.getOwnerComponent().getRouter().navTo("exportPage");
 		}
 	});
 });
