@@ -2,5 +2,8 @@
 .sapUiFormLblColon .sapUiFormElementLbl>.sapMLabel:after {
     content: "";
 }
+.sapMOHTitle h1 .sapMText {
+    color: #0080ff;
+}
 
 

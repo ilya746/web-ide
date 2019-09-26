@@ -22,9 +22,12 @@ sap.ui.define([
 
 		// выводится messagebox с информацией выбранной строки
 		onClick: function (oEvent) {
-			/*var oSelectedItem = oEvent.getParameter("listItem");
+			/*
+			//вывод информации в messageBox в виде json
+			var oSelectedItem = oEvent.getParameter("listItem");
           var oModel = oSelectedItem.getBindingContext().getObject();
-          MessageBox.show(JSON.stringify(oModel)*/
+          MessageBox.show(JSON.stringify(oModel)
+          */
 			var selectedCar = oEvent.getParameter("listItem");
 			var brandName = selectedCar.getBindingContext().getProperty("Brand");
 			var modelName = selectedCar.getBindingContext().getProperty("Model");

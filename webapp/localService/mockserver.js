@@ -18,6 +18,14 @@ sap.ui.define([
 			var sPath = jQuery.sap.getModulePath("Project.Project.localService");
 			oMockServer.simulate(sPath + "/metadata.xml", sPath + "/mockdata");
 		
+		var fnCustom = function(oEvent) {
+		var oXhr = oEvent.getParameter("oXhr");
+		if (oXhr && oXhr.url.indexOf("first") > -1) {
+			oEvent.getParameter("oFilteredData").results.splice(3, 100);
+		}
+	};
+	oMockServer.attachAfter("GET", fnCustom, "Cars");
+		
 			// start
 			oMockServer.start();
 		}

@@ -5,8 +5,9 @@ sap.ui.define([
 	"sap/ui/export/Spreadsheet",
 	"sap/ui/model/json/JSONModel",
 	"sap/ui/core/util/Export",
-	"sap/ui/core/util/ExportTypeCSV"
-], function (Controller, MockServer, ODataModel, Spreadsheet, JSONModel, Export, ExportCSV) {
+	"sap/ui/core/util/ExportTypeCSV",
+	"sap/ui/core/Fragment"
+], function (Controller, MockServer, ODataModel, Spreadsheet, JSONModel, Export, ExportCSV, Fragment) {
 	"use strict";
 
 	return Controller.extend("Project.Project.controller.ExportTable", {
@@ -47,22 +48,22 @@ sap.ui.define([
 					path: "/CarCollection"
 				},
 				columns: [{
-					name: "Название",
+					name: "Name",
 					template: {
 						content: "{carName}"
 					}
 				}, {
-					name: "Марка",
+					name: "Brand",
 					template: {
 						content: "{Brand}"
 					}
 				}, {
-					name: "Модель",
+					name: "Model",
 					template: {
 						content: "{Model}"
 					}
 				}, {
-					name: "Описание",
+					name: "Description",
 					template: {
 						content: "{Description}"
 					}
@@ -74,11 +75,41 @@ sap.ui.define([
 				oExport.destroy();
 			});
 		},
+		onOpenCarCollection: function (oEvent) {
+			var oButton = oEvent.getSource();
+			// create popover
+			if (!this._oPopover) {
+				Fragment.load({
+					id: "popoverNavCon",
+					name: "Project.Project.view.CarCollectionList",
+					controller: this
+				}).then(function (oPopover) {
+					this._oPopover = oPopover;
+					this.getView().addDependent(this._oPopover);
+					this._oPopover.openBy(oButton);
+				}.bind(this));
+			} else {
+				this._oPopover.openBy(oButton);
+			}
+		},
+		onNavToCar: function (oEvent) {
+			var oCtx = oEvent.getSource().getBindingContext();
+			var oNavCon = Fragment.byId("popoverNavCon", "navCon");
+			var oDetailPage = Fragment.byId("popoverNavCon", "detail");
+			oNavCon.to(oDetailPage);
+			oDetailPage.bindElement(oCtx.getPath());
+			this._oPopover.focus();
+		},
+
+		onNavBackList: function (oEvent) {
+			var oNavCon = Fragment.byId("popoverNavCon", "navCon");
+			oNavCon.back();
+			this._oPopover.focus();
+		},
 
 		onExit: function () {
 			this._oMockServer.stop();
 		}
-
 	});
 
 });

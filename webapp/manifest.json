@@ -125,8 +125,16 @@
 				"ExportTable": {
 					"viewType": "XML",
 					"viewName": "ExportTable"
+				},
+				"MockServer": {
+					"viewType": "XML",
+					"viewName": "MockServer"
 				}
 			}
 		}
+	},
+	"sap.platform.hcp": {
+		"uri": "webapp",
+		"_version": "1.1.0"
 	}
 }

@@ -1,0 +1,34 @@
+{
+    "application": {
+        "id": "",
+        "title": "Project.Project.Project",
+        "type": "SAP_UI5_Component",
+        "componentUrl": "/",
+        "appUrl": "#Project-Display",
+        "navigationComponentName": "Project.Project",
+        "intentSemanticObject": "Project",
+        "intentAction": "Display",
+        "html5ApplicationName": "project",
+        "HCPParentApplicationName": ""
+    },
+    "assignment": {
+        "groups": [
+            "c7fd0c12-b3ac-4a05-9108-b5a74db5753c"
+        ],
+        "contentPackages": [
+            "750d2dd6-2c63-4c36-8500-dd5808dcbc8e"
+        ],
+        "categories": []
+    },
+    "tile": {
+        "type": "StaticTile",
+        "title": "Cars",
+        "subtitle": "Show car detail",
+        "searchKeywords": "Cars,Show car detail",
+        "displayIconUrl": "sap-icon://car-rental",
+        "displayInfoText": "",
+        "size": "1x1",
+        "serviceURL": "",
+        "refreshInterval": ""
+    }
+}

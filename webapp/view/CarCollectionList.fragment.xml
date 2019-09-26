@@ -1,0 +1,46 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<Popover
+		showHeader="false"
+		contentWidth="320px"
+		contentHeight="500px"
+		placement="Bottom" >
+		<NavContainer
+			id="navCon">
+			<Page
+				id="master"
+				title="Car collection">
+				<List
+					id="list"
+					items="{/CarCollection}" >
+					<StandardListItem
+						title="{carName}"
+						description="{Description}"
+						type="Navigation"
+						icon="{Picture}"
+						press="onNavToCar"
+						iconDensityAware="false"
+						iconInset="false" />
+				</List>
+			</Page>
+			<Page
+				id="detail"
+				showNavButton="true"
+				navButtonPress="onNavBackList"
+				title="About {carName}">
+				<ObjectHeader
+					title="{carName}" >
+					<attributes>
+						<ObjectAttribute text="Brand: {Brand}" />
+						<ObjectAttribute text="Model: {Model}"/>
+						<ObjectAttribute text="Power: {Power}"/>
+						<ObjectAttribute text="Color: {Color}"/>
+						<ObjectAttribute text="Price: {Price}"/>
+						<ObjectAttribute text="Description: {Description}" />
+					</attributes>
+				</ObjectHeader>
+			</Page>
+		</NavContainer>
+	</Popover>
+</core:FragmentDefinition>

@@ -1,5 +1,4 @@
-<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="Project.Project.controller.ExportTable"
-	xmlns:html="http://www.w3.org/1999/xhtml">
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" controllerName="Project.Project.controller.ExportTable">
 	<App>
 		<pages>
 			<Page title="Export Page" showNavButton="true" navButtonPress="onNavBack">
@@ -8,7 +7,7 @@
 						<headerToolbar>
 							<OverflowToolbar>
 								<ToolbarSpacer/>
-								<Button icon="sap-icon://excel-attachment" press="handleExcelExport" tooltip = "export to xls"/>
+								<Button icon="sap-icon://excel-attachment" press="handleExcelExport" tooltip="export to xls" text="export" activeIcon="sap-icon://download" type="Accept"/>
 							</OverflowToolbar>
 						</headerToolbar>
 						<columns>
@@ -32,6 +31,7 @@
 							</ColumnListItem>
 						</items>
 					</Table>
+					<Button text="Show carCollection" press="onOpenCarCollection"/>
 				</content>
 			</Page>
 		</pages>
